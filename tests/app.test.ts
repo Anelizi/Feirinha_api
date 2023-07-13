@@ -4,10 +4,10 @@ import app from "../src/index";
 const server = supertest(app);
 
 describe("testsFruits", () => {
-//   it("should return 201 when inserting a fruit", async () => {
-//     const response = await server.post("/fruits");
-//     expect(response.status).toBe(201);
-//   });
+  it("should return 201 when inserting a fruit", async () => {
+    const response = await server.post("/fruits");
+    expect(response.status).toBe(201);
+  });
 
 //   it("should return 409 when inserting a fruit that is already registered", async () => {
 //     const response = await server.post("/fruits");
