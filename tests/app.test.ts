@@ -20,9 +20,11 @@ describe("testsFruits", () => {
     expect(response.status).toBe(422);
   });
 
-//   it("shoud return 404 when trying to get a fruit that doesn't exists", async () => {
-
-//   });
+  it("shoud return 404 when trying to get a fruit that doesn't exists", async () => {
+    const fruitId = 7;
+    const response = await server.get(`fruits/${fruitId}`);
+    expect(response.status).toBe(404);
+  });
 
 //   it("should return 400 when id param is not valid", async () => {
 
