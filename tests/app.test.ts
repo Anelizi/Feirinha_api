@@ -5,7 +5,10 @@ const server = supertest(app);
 
 describe("testsFruits", () => {
   it("should return 201 when inserting a fruit", async () => {
-    const response = await server.post("/fruits");
+    const response = (await server.post("/fruits").send({
+        name: "banana",
+        price: 5,
+  }))
     expect(response.status).toBe(201);
   });
 
